@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  overflow-x: hidden; /* Oculta el desplazamiento horizontal */
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+
+}
+
+
+.PrimaryBg{
+  background-color: #F8F7F4;
+}
+.PrimaryColor{
+  color: #8c857a;
+}
+
+.SecondaryBg{
+  background-color: #8c857a;
+}
+
+.SecondaryColor{
+  color: #000000;
+}
+
+.ThirdBg{
+  background-color: #E8E8E8;
+}
+
+.subtitleColor{
+  color: #a49e95;
+}
+
+.btnColor2{
+  background-color: transparent;
+  border: #E8E8E8;
+}
+
+.btnColor3{
+  background-color: #E8E8E8;
+  border: #E8E8E8;
+  color: #ffffff;
+}
+
+html, body {
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0px;
+}
+:root{
+  background-color: #ffffff;
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  margin: 0px;
+  overflow-x: hidden;
+}
+
+.btn{
+  border: 0;
+}
+.MainTitle{
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.Title{
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+
+}
+.Subtitle{
+ font-family: "Cormorant Garamond", serif;
+  font-weight: 400;
+}
+.NormalText{
+  font-family: "Poiret One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.btnFont{
+  font-family: "Crimson Text", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.btnColor{
+  background-color: pink;
+  border: #000000;
+  
+
+}
+
+.line{
+  line-height: 1em;
+}
+
+/* IMAGEN PORTADA*/
+.bgPortrait{
+  margin: 0;
+  padding: 0;
+  background-image: url("/Imgs/Portada.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 65% 40%; /* background-position: X Y; */
+}
+
+/* IMAGEN FILTRO*/
+.bgFiltro{
+  margin: 0;
+  padding: 0;
+  background-image: url("/Imgs/Filtro.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+}
+
+
+/* SPIN AUDIO */
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 4s linear infinite;
+}
+
+.main-pic-container {
+  @screen lg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Establece un z-index bajo para <MainPic /> */
+  }
+}
+
+.content {
+  @screen lg {
+  position: relative; /* Asegura que los componentes hijos se posicionen correctamente */
+  z-index: 1; /* Establece un z-index más alto para el contenido */
+  /* Agrega el color de fondo que desees */
+
+  /* Ajusta el margen superior para que no se superponga a <MainPic /> */
+  margin-top: 70% /* Altura de <MainPic /> */;
+  }
+}
